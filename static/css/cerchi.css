@@ -17,6 +17,26 @@
     height: 200px;
     background: red;
     border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#cerchio4{
+    width: 200px;
+    height: 200px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#cerchio5{
+    width: 200px;
+    height: 200px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 body{
