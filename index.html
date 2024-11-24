@@ -28,7 +28,7 @@
         </div>
         <div class="inner">
             <p id="inner-text"></p>
-            <p id="bestscore"></p>
+            <p id="score"></p>
         </div>
     </div>
     <script>
@@ -75,7 +75,7 @@
     let now
     let reflex
     let bestScore = 1000000000
-    let updteScore = document.querySelector("#bestscore")
+    let updteScore = document.querySelector("#score")
     button.addEventListener("click", function () {
     if (check === false) {
         reset()
@@ -86,11 +86,11 @@
     } else {
         reflex = (Date.now() - now)/1000
         inner.innerHTML = "il tempo di reazione è: " + reflex + "s"
-        if(reflex<bestScore){
-             bestScore  = reflex
-            updteScore.innerHTML = "migliore: " + bestScore + "s"
+        if(reflex<Score){
+             Score  = reflex
+            updteScore.innerHTML = "migliore: " + Score + "s"
         }else{
-            updteScore.innerHTML = "peggiore: " + bestScore + "s"
+            updteScore.innerHTML = "peggiore: " + Score + "s"
         }
         button.disabled = true
         setTimeout(reset, 5000)
