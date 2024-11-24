@@ -1,10 +1,4 @@
-#cerchio1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    border-radius: 50%;
-}
-#cerchio2{
+.stoplight1{
     width: 200px;
     height: 200px;
     background: red;
@@ -12,7 +6,7 @@
     margin-right: 25px;
     margin-left: 25px;
 }
-#cerchio3{
+.stoplight2{
     width: 200px;
     height: 200px;
     background: red;
@@ -20,17 +14,7 @@
     margin-right: 25px;
     margin-left: 25px;
 }
-
-#cerchio4{
-    width: 200px;
-    height: 200px;
-    background: red;
-    border-radius: 50%;
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-#cerchio5{
+.stoplight3{
     width: 200px;
     height: 200px;
     background: red;
@@ -40,9 +24,9 @@
 }
 
 body{
-<<<<<<< HEAD
-    background-color: grey;
+    background-color:#515555cc;
 }
+
 
 .green{
     width: 200px;
@@ -57,7 +41,4 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-=======
-    background-color:#aca89c;
->>>>>>> 6bf85185a57eedec97fd7b02adc2afd334d5b70a
 }
