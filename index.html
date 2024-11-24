@@ -9,7 +9,82 @@
 </head>
 <body>
     <script>
-        let button = document.querySelector("#bottone")
+    function random(min, max) {
+    const n = Math.floor(Math.random() * (max - min + 1)) + min
+    console.log(n)
+    return n
+}
+
+    function delay(){
+        
+    button.innerHTML = "PREMI ORA!"
+    circle1.classList.add("green")
+    circle1.classList.remove("cerchio1")
+    circle2.classList.add("green")
+    circle2.classList.remove("cerchio2")
+    circle3.classList.add("green")
+    circle3.classList.remove("cerchio3")  
+    circle4.classList.add("cerchio4")
+    circle4.classList.remove("green")
+    circle5.classList.add("cerchio5")
+    circle5.classList.remove("green")     
+    check = true
+    now = Date.now()
+        
+    }
+
+    function reset(){
+
+    circle1.classList.add("cerchio1")
+    circle1.classList.remove("green")
+    circle2.classList.add("cerchio2")
+    circle2.classList.remove("green")
+    circle3.classList.add("cerchio3")
+    circle3.classList.remove("green") 
+    circle4.classList.add("cerchio4")
+    circle4.classList.remove("green")
+    circle5.classList.add("cerchio5")
+    circle5.classList.remove("green")   
+    check = false 
+    button.disabled = false 
+    button.innerHTML = "CLICCA PER GIOCARE"
+        
+    }
+
+    let button = document.querySelector("#bottone")
+    let circle1 = document.querySelector("#cerchio1") 
+    let circle2 = document.querySelector("#cerchio2")
+    let circle3 = document.querySelector("#cerchio3")
+    let circle4 = document.querySelector("#cerchio4")
+    let circle5 = document.querySelector("#cerchio5")
+    let check = false
+    let inner = document.querySelector("#inner-text")
+    let now
+    let reflex
+    let bestScore = 1000000000
+    let updteScore = document.querySelector("#bestscore")
+
+    button.addEventListener("click", function () {
+    if (check === false) {
+        reset()
+        let rnd = random(1000, 5000)
+        inner.innerHTML = "Attendi il semaforo verde, stai attento!"
+        setTimeout(delay, rnd)
+        
+    } else {
+        reflex = (Date.now() - now)/1000
+        console.log(reflex)
+        inner.innerHTML = "Il tuo tempo di reazione è: " + reflex + "s"
+        if(reflex<bestScore){
+             bestScore  = reflex
+            updteScore.innerHTML = "Tempo migliore: " + bestScore + "s"
+        }else{
+            updteScore.innerHTML = "Tempo migliore: " + bestScore + "s"
+        }
+        button.disabled = true
+        setTimeout(reset, 5000)
+    }
+})
     </script>
     <div class="container">
        
@@ -21,18 +96,13 @@
             <div id="cerchio1"></div>
             <div id="cerchio2"></div>
             <div id="cerchio3"></div>
+            <div id="cerchio4"></div>
+            <div id="cerchio5"></div>
         </div>
-       
-        <div class="TITOLO1">
-            <p>
-                Cliccare il pulsante qui sotto, prestare MOLTA <br>attenzione
-                al colore del semaforo: non appena diventa verde,dovrai
-                <br>premere nuovamente il pulsante il più velocemente possibile.
-            </p>
-        </div>
+
         <div class="bottone">
             <form action="">
-                <input type="button" name="bottone1" value="CLICCA PER GIOCARE">
+                <input type="button" id="bottone" name="bottone" value="CLICCA PER GIOCARE">
             </form>
         </div>
     </div>

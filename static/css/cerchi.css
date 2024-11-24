@@ -17,8 +17,43 @@
     height: 200px;
     background: red;
     border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#cerchio4{
+    width: 200px;
+    height: 200px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#cerchio5{
+    width: 200px;
+    height: 200px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 body{
-    background-color:#5a3be3;
+    background-color: grey;
+}
+
+.green{
+    width: 200px;
+    height: 200px;
+    background:green;
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
