@@ -40,6 +40,7 @@
 }
 
 body{
+<<<<<<< HEAD
     background-color: grey;
 }
 
@@ -56,4 +57,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+=======
+    background-color:#aca89c;
+>>>>>>> 6bf85185a57eedec97fd7b02adc2afd334d5b70a
 }

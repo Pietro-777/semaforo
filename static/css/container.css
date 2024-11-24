@@ -11,4 +11,6 @@
     justify-content: center;
     flex-direction: row;
     margin-top: 40px;
+    background-color: black;
+    border-radius: 10px;
 }
